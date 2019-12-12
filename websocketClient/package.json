@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "chezky felsen",
+  "author": "Chezky Felsen",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

@@ -1,0 +1,19 @@
+version: '3'
+services:
+  # server
+  python:
+    image: "python-websocket-server"
+    #connect with port 5432, the container port
+    ports:
+      - "8001:5432"
+  #  clinet
+  node:
+    image: "node-websocket-client"
+    links:
+      - "python:server"
+    ports:
+      - "8000:8000"
+networks:
+  default:
+    # Use a custom driver
+    driver: bridge

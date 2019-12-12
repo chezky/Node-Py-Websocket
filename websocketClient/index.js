@@ -1,10 +1,14 @@
 // //index.js
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://localhost:8080');
+const address = 'ws://python:5432'
+
+const ws = new WebSocket(address);
+
+console.log('ready to send to ' + address)
 
 ws.on('open', function open() {
-  ws.send('something');
+  ws.send('Chezky');
 });
 
 ws.on('message', function incoming(data) {
