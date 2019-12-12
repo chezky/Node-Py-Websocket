@@ -20,3 +20,24 @@ function Submit(input) {
         }
     });
 }
+
+$(document).on('submit', '#imageform', function(e){
+    e.preventDefault();
+    SubmitImage();
+});
+
+function SubmitImage() {
+    var form_data = new FormData($('#imageform')[0]);
+    $.ajax({
+        type:'POST',
+        url:'/uploadimage',
+        processData: false,
+        contentType: false,
+        async: true,
+        cache: false,
+        data : form_data,
+        success: function(response){
+            console.log(response);
+        }
+    });
+}
