@@ -6,7 +6,7 @@ services:
     #connect with port 5432, the container port
     ports:
       - "8001:5432"
-  #  clinet
+  #  client
   node:
     image: "node-websocket-client"
     links:

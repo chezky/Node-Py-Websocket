@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
+//for text data
 app.post('/search', (req, res) => {
     var ws = new WebSocket(address);
 
@@ -33,6 +34,7 @@ const upload = multer({
   dest: "./uploads"
 });
 
+//for image data
 app.post('/uploadimage', upload.single("pic"),(req, res) => {
     const tempPath = req.file.path;
     fs.readFile(tempPath, function(err, data) {
