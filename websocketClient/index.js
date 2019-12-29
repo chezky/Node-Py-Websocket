@@ -38,7 +38,12 @@ app.post('/uploadimage', upload.single("pic"),(req, res) => {
     console.log(tempPath);
     fs.readFile(tempPath, function(err, data) {
         if (err) throw err;
-        var encodedImage = new Buffer(data, 'binary').toString('base64');
+        let buff = fs.readFileSync(tempPath);
+        let base64data = buff.toString('base64');
+        // console.log('Image converted to base 64 is:\n\n' + base64data);
+        // new Buffer.from(tempPath).toString('base64');
+        var encodedImage = Buffer.alloc(base64data.length, base64data, 'base64');
+        console.log('image byte length is : ' + base64data.length);
         var ws = new WebSocket(address);
 
         ws.on('open', function open() {
