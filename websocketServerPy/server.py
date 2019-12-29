@@ -7,7 +7,9 @@ from fastai.vision import *
 from io import BytesIO
 from pathlib import Path
 
-model_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
+# original link for drop box looks like https://www.dropbox.com/s/6as91r2z853n1tu/export.pkl?dl=1
+# change dl=1 at the end to ?raw=1
+model_file_url = 'https://www.dropbox.com/s/6as91r2z853n1tu/export.pkl?raw=1'
 model_file_name = 'export.pkl'
 
 path = Path(__file__).parent
