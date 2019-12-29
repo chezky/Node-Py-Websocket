@@ -28,12 +28,12 @@ Open a browser and navigate to localhost:8000 or 192.168.99.100:8000 if you are 
 
 ## Notes
 
-* To download latest [pytorch wheel images](https://download.pytorch.org/whl/cpu/torch_stable.html)
+* To download latest [pytorch wheel images](https://download.pytorch.org/whl/cpu/torch_stable.html)<br/>
 To use your own model, replace ```model_file_url``` to your own download link.
 
 ## Authors
 
-* **Chezky Felsen** - *Author* 
+* **Chezky Felsen** - *Author*
 
 ## License
 
