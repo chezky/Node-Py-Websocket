@@ -2,7 +2,7 @@
 const express = require('express');
 var bodyParser = require('body-parser');
 const WebSocket = require('ws');
-const address = 'ws://python:5432';
+const address = 'ws://localhost:5432';
 var fs = require("fs");
 const multer = require("multer");
 
